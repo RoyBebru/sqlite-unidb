@@ -23,9 +23,9 @@ ORDER BY tr.fullname
 if __name__ == "__main__":
     print("-- 8. Знайти середню оцінку, який ставить певний викладач зі своїх предметів.")
     print("-- --------------------------+-----+---------------------")
-    print("#N                   TEACHER | N_e | AVER GRADE")
+    print("#N                   TEACHER | Ngr | AVER GRADE")
     print("-- --------------------------+-----+---------------------")
     i = 0
-    for teacher, aver_eval, num_evals in execute_query(sql):
+    for teacher, aver_grade, num_grades in execute_query(sql):
         i += 1
-        print("%2d %25s | %3d | %s" % (i, teacher, num_evals, aver_eval))
+        print("%2d %25s | %3d | %s" % (i, teacher, num_grades, aver_grade))
